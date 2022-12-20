@@ -27,12 +27,12 @@ public class Point {
 			double d = Math.sqrt(dX*dX + dY*dY);
 			return d;
 		}
-		/*
+		
 		@Override
 		public String toString() {
 			return "(" + x + ", " + y + ")";
 		}
-	*/
+	
 		@Override
 		public boolean equals(Object obj) {
 			if (obj instanceof Point) {

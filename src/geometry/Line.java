@@ -19,6 +19,20 @@ public class Line {
 		this.endPoint = endPoint;
 		this.selected = selected;
 	}
+	@Override
+    public String toString(){
+        return startPoint+"-->"+endPoint;
+    }
+	@Override
+    public boolean equals(Object objL){
+        if (objL instanceof Line){
+            Line temp = (Line)objL;
+            if(startPoint.equals(temp.startPoint) && endPoint.equals(temp.endPoint)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 	public double length() {
 		return startPoint.distance(endPoint.getX(), endPoint.getY());
